@@ -6,7 +6,7 @@ def open_write_content(file):
     with open(file) as curr_file:
         lines=curr_file.readlines()
         lines.append("\n") # appears after each file
-        with open(parent_location+"\deploy_script.sql" , "a") as write_file:
+        with open(parent_location+"\\"+ deploy_script_file_name , "a") as write_file:
             write_file.writelines(lines)
         
 
@@ -24,6 +24,7 @@ def append_all_files (folder ,extn):
 
 
 patch_name ="Jul2022"
+deploy_script_file_name = "deploy_script.sql"
 #patch_folder_type =["ddl" ,"dml" ,"views","triggers" , "packages"]
 patch_folder_type =["ddl" , "dml" ,"final" ] # for testing
 parent_location = os.getcwd()
