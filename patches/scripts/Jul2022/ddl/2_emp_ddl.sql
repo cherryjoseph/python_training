@@ -1,0 +1,4 @@
+CREATE TABLE EMP(
+    empno   NUMBER(10) PRIMARY KEY ,
+    ename   VARCHAR2(10) NOT NULL
+);
